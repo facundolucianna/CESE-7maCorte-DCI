@@ -20,7 +20,7 @@ U 1 1 5D8DA9E1
 P 7500 3700
 F 0 "U302" H 7150 3050 50  0000 C CNN
 F 1 "ICM-20948" H 7750 3050 50  0000 C CNN
-F 2 "Sensor_Motion:InvenSense_QFN-24_3x3mm_P0.4mm_NoMask" H 7500 2700 50  0001 C CNN
+F 2 "Sensor_Motion:InvenSense_QFN-24_3x3mm_P0.4mm" H 7500 2700 50  0001 C CNN
 F 3 "http://www.invensense.com/wp-content/uploads/2016/06/DS-000189-ICM-20948-v1.3.pdf" H 7500 3550 50  0001 C CNN
 	1    7500 3700
 	1    0    0    -1  

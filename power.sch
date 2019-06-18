@@ -202,19 +202,14 @@ Wire Wire Line
 Wire Wire Line
 	3250 2350 3250 1950
 Wire Wire Line
-	3250 1950 2250 1950
+	3250 1950 2950 1950
 Wire Wire Line
 	3550 2450 3350 2450
 Wire Wire Line
 	3150 2450 3150 1850
-Wire Wire Line
-	2250 1850 2950 1850
 Connection ~ 3350 2450
 Wire Wire Line
 	3350 2450 3150 2450
-Connection ~ 2950 1850
-Wire Wire Line
-	2950 1850 3150 1850
 $Comp
 L Device:C C205
 U 1 1 5D135344
@@ -239,8 +234,6 @@ Wire Wire Line
 Connection ~ 4050 2750
 Wire Wire Line
 	3350 2450 3350 2900
-Wire Wire Line
-	2950 1850 2950 2900
 Wire Wire Line
 	2550 1650 2550 2900
 $Comp
@@ -372,17 +365,6 @@ Wire Wire Line
 	6600 3100 6250 3100
 Text Notes 6400 1350 0    50   ~ 0
 Circuito Auto-reset\nConfiguracion de Modo de inicio\nPin        Default       Boot        Download\nGPIO0         1             1           0\nESP32_TXD    1             1           x                \nGPIO2         0             x           0\nGPIO4         0             x           x\nMTD0          1             x           x\nGPIO5         1             1           x\n
-$Comp
-L Connector_Generic:Conn_01x02 J202
-U 1 1 5D256BBC
-P 2150 5500
-F 0 "J202" H 2150 5300 50  0000 C CNN
-F 1 "LiPo" H 2150 5600 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 2150 5500 50  0001 C CNN
-F 3 "~" H 2150 5500 50  0001 C CNN
-	1    2150 5500
-	-1   0    0    1   
-$EndComp
 $Comp
 L power:GND #PWR0203
 U 1 1 5D25E588
@@ -541,12 +523,6 @@ Wire Wire Line
 Wire Wire Line
 	4900 6850 4900 6200
 Connection ~ 3050 6850
-Wire Wire Line
-	2350 5500 2450 5500
-Wire Wire Line
-	2450 5500 2450 6850
-Wire Wire Line
-	2350 5400 2700 5400
 Wire Wire Line
 	2450 6850 2700 6850
 Wire Wire Line
@@ -951,19 +927,6 @@ Wire Wire Line
 Connection ~ 3850 5300
 Wire Wire Line
 	2550 1650 3100 1650
-$Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 5DADC7B6
-P 4050 1450
-F 0 "#FLG0101" H 4050 1525 50  0001 C CNN
-F 1 "PWR_FLAG" H 4050 1623 50  0000 C CNN
-F 2 "" H 4050 1450 50  0001 C CNN
-F 3 "~" H 4050 1450 50  0001 C CNN
-	1    4050 1450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4050 1650 4050 1450
 Text Notes 1150 2650 0    50   ~ 0
 El shield del USB\nno está conectado \na tierra
 NoConn ~ 1850 2350
@@ -1005,4 +968,41 @@ $EndComp
 Wire Wire Line
 	7000 4950 7000 4800
 Connection ~ 7000 4950
+$Comp
+L power:VBUS #PWR0118
+U 1 1 5D2CA312
+P 9050 5100
+F 0 "#PWR0118" H 9050 4950 50  0001 C CNN
+F 1 "VBUS" H 9065 5273 50  0000 C CNN
+F 2 "" H 9050 5100 50  0001 C CNN
+F 3 "" H 9050 5100 50  0001 C CNN
+	1    9050 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 5100 9050 5250
+$Comp
+L Connector_Generic:Conn_01x02 J202
+U 1 1 5D256BBC
+P 2150 5400
+F 0 "J202" H 2150 5200 50  0000 C CNN
+F 1 "LiPo" H 2150 5500 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 2150 5400 50  0001 C CNN
+F 3 "~" H 2150 5400 50  0001 C CNN
+	1    2150 5400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 5500 2450 6850
+Wire Wire Line
+	2450 5500 2350 5500
+Wire Wire Line
+	2350 5400 2700 5400
+Wire Wire Line
+	2250 1850 3150 1850
+Wire Wire Line
+	2950 2900 2950 1950
+Connection ~ 2950 1950
+Wire Wire Line
+	2950 1950 2250 1950
 $EndSCHEMATC
