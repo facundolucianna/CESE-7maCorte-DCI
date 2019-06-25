@@ -1355,8 +1355,6 @@ Wire Wire Line
 Wire Wire Line
 	6150 7650 6300 7650
 Wire Notes Line
-	5850 5800 5850 4450
-Wire Notes Line
 	500  5800 7000 5800
 Wire Notes Line
 	7000 5800 7000 6550
@@ -1394,4 +1392,6 @@ Wire Wire Line
 Connection ~ 1400 4000
 Wire Wire Line
 	1400 4000 1400 4100
+Wire Notes Line
+	5850 2750 5850 5800
 $EndSCHEMATC
