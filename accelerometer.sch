@@ -7,8 +7,8 @@ encoding utf-8
 Sheet 3 4
 Title "Replica ESP32 Thing - Inertial measurement unit"
 Date ""
-Rev "Piza AG"
-Comp "Facundo A Lucianna"
+Rev "1.1"
+Comp "Autor: Facundo A Lucianna - Revisor: Alvaro Gabriel Pizá"
 Comment1 "Modificacion: Agregado de IMU"
 Comment2 "https://creativecommons.org/licenses/by-sa/4.0/"
 Comment3 "Modificación sin el respaldo del autor original"
@@ -333,4 +333,8 @@ Wire Wire Line
 NoConn ~ 6900 3400
 Wire Wire Line
 	6900 3400 7000 3400
+Text Notes 5050 4350 0    50   ~ 0
+Manufacturer Texas Instruments \nMfr. Part # PCA9306DCUR \nMouser Part # 595-PCA9306DCUR \nPackage # VSSOP-8
+Text Notes 8400 3950 0    50   ~ 0
+Manufacturer TDK InvenSense \nMfr. Part # ICM-20948 \nMouser Part # 410-ICM-20948 \nPackage # 24-Pin QFN\n\nAlternativa (No recomendada):\n\nManufacturer TDK InvenSense \nMfr. Part # MPU-9250  \nMouser Part # 410-MPU-9250 \nPackage # 24-Pin QFN
 $EndSCHEMATC

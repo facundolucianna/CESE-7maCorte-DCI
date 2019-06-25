@@ -7,7 +7,7 @@
       "Application": "Pcbnew",
       "Version":     "5.1.2"
     },
-    "CreationDate":  "2019-06-17T23:05:56-03:00"
+    "CreationDate":  "2019-06-25T01:31:05-03:00"
   },
   "GeneralSpecs":
   {
@@ -15,7 +15,7 @@
     {
       "Name": "luciannaFacundo",
       "GUID": "6c756369-616e-46e6-9146-6163756e646f",
-      "Revision": "Piza AG"
+      "Revision": "1.1"
     },
     "Size":
     {

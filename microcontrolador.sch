@@ -7,8 +7,8 @@ encoding utf-8
 Sheet 4 4
 Title "Replica ESP32 Thing - Microcontrolador + Headers"
 Date "2019-06-15"
-Rev "Piza AG"
-Comp "Facundo A Lucianna"
+Rev "1.1"
+Comp "Autor: Facundo A Lucianna - Revisor: Alvaro Gabriel Pizá"
 Comment1 "https://creativecommons.org/licenses/by-sa/4.0/"
 Comment2 "Modificación sin el respaldo del autor original"
 Comment3 "Bajo Licencia Creative Commons Attributions Share-Alike 4.0"
@@ -65,8 +65,6 @@ Wire Wire Line
 Connection ~ 2550 1600
 Wire Wire Line
 	2550 1600 2550 1400
-Text HLabel 2400 2250 0    50   UnSpc ~ 0
-VDD1.8
 $Comp
 L Device:C C405
 U 1 1 5D076EC0
@@ -145,8 +143,6 @@ Wire Wire Line
 	1500 2350 2850 2350
 Wire Wire Line
 	950  2450 2850 2450
-Text HLabel 2750 3150 0    50   Input ~ 0
-CHIP_PU
 Wire Wire Line
 	1900 2800 2850 2800
 Wire Wire Line
@@ -160,12 +156,12 @@ Text GLabel 2700 3600 0    50   BiDi ~ 0
 Text GLabel 2700 3700 0    50   BiDi ~ 0
 32K_XIN
 $Comp
-L Device:Crystal_GND2_Small Y401
+L Device:Crystal Y401
 U 1 1 5D0B1695
 P 1600 4000
 F 0 "Y401" H 1600 4225 50  0000 C CNN
 F 1 "26MHz" H 1600 4134 50  0000 C CNN
-F 2 "Crystal:Crystal_SMD_5032-4Pin_5.0x3.2mm" H 1600 4000 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_5032-2Pin_5.0x3.2mm" H 1600 4000 50  0001 C CNN
 F 3 "~" H 1600 4000 50  0001 C CNN
 	1    1600 4000
 	1    0    0    -1  
@@ -193,11 +189,7 @@ F 3 "~" H 1400 4250 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1700 4000 1800 4000
-Wire Wire Line
 	1800 4000 1800 4100
-Wire Wire Line
-	1600 4100 1600 4450
 Wire Wire Line
 	1400 4400 1400 4450
 Wire Wire Line
@@ -208,34 +200,22 @@ Wire Wire Line
 Wire Wire Line
 	1800 4450 1600 4450
 Wire Wire Line
-	1400 4100 1400 4000
-Wire Wire Line
-	1400 4000 1500 4000
-Wire Wire Line
 	1800 4000 2850 4000
-Connection ~ 1800 4000
-Wire Wire Line
-	1400 4000 1400 3700
 Wire Wire Line
 	1400 3700 1800 3700
 Wire Wire Line
 	1800 3700 1800 3900
 Wire Wire Line
 	1800 3900 2850 3900
-Connection ~ 1400 4000
-Text HLabel 2700 4350 0    50   Output ~ 0
-ESP32_TXD
-Text HLabel 2700 4250 0    50   Input ~ 0
-ESP32_RXD
 $Comp
 L power:GND #PWR0104
 U 1 1 5D0CCE53
-P 2750 5050
-F 0 "#PWR0104" H 2750 4800 50  0001 C CNN
-F 1 "GND" H 2755 4877 50  0000 C CNN
-F 2 "" H 2750 5050 50  0001 C CNN
-F 3 "" H 2750 5050 50  0001 C CNN
-	1    2750 5050
+P 2750 4700
+F 0 "#PWR0104" H 2750 4450 50  0001 C CNN
+F 1 "GND" H 2755 4527 50  0000 C CNN
+F 2 "" H 2750 4700 50  0001 C CNN
+F 3 "" H 2750 4700 50  0001 C CNN
+	1    2750 4700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -327,8 +307,6 @@ Wire Wire Line
 	4750 2300 4550 2300
 Wire Wire Line
 	4550 2400 4750 2400
-Text HLabel 4750 2600 2    50   Input ~ 0
-GPIO0
 Text GLabel 4750 2700 2    50   BiDi ~ 0
 GPIO2
 Text GLabel 4750 2800 2    50   BiDi ~ 0
@@ -404,7 +382,7 @@ L Memory_Flash:W25Q32JVSS U402
 U 1 1 5D138EAE
 P 9350 2300
 F 0 "U402" H 9500 2650 50  0000 C CNN
-F 1 "W25Q32JVSS" H 9650 1950 50  0000 C CNN
+F 1 "W25Q32JVSS" H 9750 1900 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm" H 9350 2300 50  0001 C CNN
 F 3 "http://www.winbond.com/resource-files/w25q32jv%20revg%2003272018%20plus.pdf" H 9350 2300 50  0001 C CNN
 	1    9350 2300
@@ -423,8 +401,6 @@ F 3 "~" H 9350 1500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9350 1900 9350 1750
-Text HLabel 9750 1500 2    50   UnSpc ~ 0
-VDD1.8
 Wire Wire Line
 	9750 1500 9550 1500
 $Comp
@@ -638,8 +614,6 @@ Wire Wire Line
 	8450 5250 8700 5250
 Wire Wire Line
 	8450 5350 8700 5350
-Text HLabel 8450 5450 0    50   BiDi ~ 0
-CHIP_PU
 Wire Wire Line
 	8450 5450 8700 5450
 $Comp
@@ -692,12 +666,6 @@ Wire Wire Line
 	8700 5750 7550 5750
 Wire Wire Line
 	7550 5750 7550 5450
-Text HLabel 8450 5850 0    50   UnSpc ~ 0
-VUSB_RAW
-Text HLabel 10000 4350 2    50   Input ~ 0
-ESP32_RXD
-Text HLabel 10000 4250 2    50   Output ~ 0
-ESP32_TXD
 Text GLabel 10000 4550 2    50   BiDi ~ 0
 GPIO19
 Text GLabel 10000 4650 2    50   BiDi ~ 0
@@ -708,8 +676,6 @@ Text GLabel 10000 4950 2    50   BiDi ~ 0
 MTDO
 Text GLabel 10000 5050 2    50   BiDi ~ 0
 GPIO2
-Text HLabel 10000 5150 2    50   Input ~ 0
-GPIO0
 Text GLabel 10000 5250 2    50   BiDi ~ 0
 GPIO4
 Text GLabel 10000 5350 2    50   BiDi ~ 0
@@ -759,10 +725,6 @@ Wire Wire Line
 	10500 5550 10500 5450
 Wire Wire Line
 	9800 5550 10500 5550
-Text HLabel 10100 5850 2    50   UnSpc ~ 0
-VUSB_RAW
-Wire Wire Line
-	9800 5850 10100 5850
 $Comp
 L power:GND #PWR0115
 U 1 1 5D354BFB
@@ -983,27 +945,15 @@ Cristal RTC
 Wire Notes Line
 	5850 2750 7600 2750
 Wire Notes Line
-	500  5800 5850 5800
-Wire Notes Line
 	5850 4450 7600 4450
 Wire Notes Line
 	7600 500  7600 4450
-Wire Notes Line
-	5850 2750 5850 7800
 Wire Notes Line
 	7550 3300 11200 3300
 Text Notes 7700 750  0    118  Italic 24
 Memoria Flash
 Text Notes 7700 3600 0    118  Italic 24
 Headers
-Text HLabel 4750 3400 2    50   BiDi ~ 0
-GPIO21
-Text HLabel 4750 3500 2    50   BiDi ~ 0
-GPIO22
-Text HLabel 10000 4150 2    50   BiDi ~ 0
-GPIO21
-Text HLabel 10000 4450 2    50   BiDi ~ 0
-GPIO22
 Text Notes 9300 1250 0    50   Italic 0
 JP401 permite elegir entre\nVDD1.8 y 3.3V como alimentacion\ndel integrado U402
 Wire Wire Line
@@ -1048,20 +998,6 @@ Text GLabel 10000 4850 2    50   BiDi ~ 0
 GPIO5
 Text Notes 5800 3350 1    50   ~ 0
 GPIO5 LED
-Wire Wire Line
-	2750 4600 2750 4900
-Wire Wire Line
-	2750 4900 1600 4900
-Wire Wire Line
-	1600 4450 1600 4900
-Connection ~ 2750 4900
-Wire Wire Line
-	2750 4900 2750 5050
-Wire Wire Line
-	1600 4900 950  4900
-Connection ~ 1600 4900
-Wire Wire Line
-	950  2850 950  4900
 Connection ~ 5950 2000
 $Comp
 L power:GND #PWR0119
@@ -1074,24 +1010,6 @@ F 3 "" H 5100 7550 50  0001 C CNN
 	1    5100 7550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5100 7450 5100 7550
-Wire Wire Line
-	3550 7200 3550 7450
-Wire Wire Line
-	3550 7450 2550 7450
-Wire Wire Line
-	2550 7300 2550 7450
-Wire Wire Line
-	2550 7450 1950 7450
-Wire Wire Line
-	1950 7200 1950 7450
-Connection ~ 2550 7450
-Wire Wire Line
-	1950 7450 1300 7450
-Wire Wire Line
-	1300 7200 1300 7450
-Connection ~ 1950 7450
 $Comp
 L Device:C C413
 U 1 1 5D4DCE88
@@ -1107,8 +1025,6 @@ Text Notes 4950 6350 0    50   ~ 0
 VDD1.8
 Text Notes 4950 6450 0    50   ~ 0
 Pin 26
-Text HLabel 4950 6600 0    50   Input ~ 0
-VDD1.8
 Wire Wire Line
 	5100 6600 4950 6600
 Wire Wire Line
@@ -1125,33 +1041,11 @@ Wire Wire Line
 	4200 6650 4200 6900
 Wire Wire Line
 	1950 6650 1950 6900
-Connection ~ 1950 6650
-Wire Wire Line
-	1950 6650 1300 6650
 Wire Wire Line
 	2550 6650 2550 6800
 Connection ~ 2550 6800
-Connection ~ 2550 6650
-Wire Wire Line
-	2550 6650 1950 6650
 Wire Wire Line
 	3550 6650 3550 6900
-Wire Wire Line
-	2550 6650 3550 6650
-Connection ~ 3550 6650
-Wire Wire Line
-	3550 6650 4200 6650
-Wire Wire Line
-	4200 7200 4200 7450
-Wire Wire Line
-	4200 7450 3550 7450
-Connection ~ 3550 7450
-Wire Wire Line
-	4200 7450 5100 7450
-Connection ~ 4200 7450
-Wire Wire Line
-	5100 7200 5100 7450
-Connection ~ 5100 7450
 $Comp
 L power:+3.3V #PWR0401
 U 1 1 5D896AA1
@@ -1163,7 +1057,6 @@ F 3 "" H 1300 6650 50  0001 C CNN
 	1    1300 6650
 	1    0    0    -1  
 $EndComp
-Connection ~ 1300 6650
 $Comp
 L Device:L L401
 U 1 1 5D0D68E4
@@ -1203,12 +1096,6 @@ Wire Wire Line
 	2400 2250 2850 2250
 Wire Wire Line
 	8450 5850 8700 5850
-Wire Wire Line
-	9800 4050 11050 4050
-Wire Wire Line
-	11050 4050 11050 5950
-Wire Wire Line
-	11050 5950 10650 5950
 $Comp
 L MyAntennas:SWRU120B A401
 U 1 1 5DBB7F09
@@ -1237,4 +1124,274 @@ Wire Wire Line
 Connection ~ 5500 2900
 Wire Wire Line
 	5500 2900 5500 2850
+$Comp
+L power:GND #PWR0136
+U 1 1 5D24C68A
+P 10800 4100
+F 0 "#PWR0136" H 10800 3850 50  0001 C CNN
+F 1 "GND" H 10805 3927 50  0000 C CNN
+F 2 "" H 10800 4100 50  0001 C CNN
+F 3 "" H 10800 4100 50  0001 C CNN
+	1    10800 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 4050 10800 4050
+Wire Wire Line
+	10800 4050 10800 4100
+Wire Wire Line
+	5100 7200 5100 7550
+$Comp
+L power:+3.3V #PWR0137
+U 1 1 5D25D661
+P 1950 6650
+F 0 "#PWR0137" H 1950 6500 50  0001 C CNN
+F 1 "+3.3V" H 1950 6800 50  0000 C CNN
+F 2 "" H 1950 6650 50  0001 C CNN
+F 3 "" H 1950 6650 50  0001 C CNN
+	1    1950 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0138
+U 1 1 5D25D844
+P 2550 6650
+F 0 "#PWR0138" H 2550 6500 50  0001 C CNN
+F 1 "+3.3V" H 2550 6800 50  0000 C CNN
+F 2 "" H 2550 6650 50  0001 C CNN
+F 3 "" H 2550 6650 50  0001 C CNN
+	1    2550 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0139
+U 1 1 5D25DA87
+P 3550 6650
+F 0 "#PWR0139" H 3550 6500 50  0001 C CNN
+F 1 "+3.3V" H 3550 6800 50  0000 C CNN
+F 2 "" H 3550 6650 50  0001 C CNN
+F 3 "" H 3550 6650 50  0001 C CNN
+	1    3550 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0140
+U 1 1 5D25DD42
+P 4200 6650
+F 0 "#PWR0140" H 4200 6500 50  0001 C CNN
+F 1 "+3.3V" H 4200 6800 50  0000 C CNN
+F 2 "" H 4200 6650 50  0001 C CNN
+F 3 "" H 4200 6650 50  0001 C CNN
+	1    4200 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0141
+U 1 1 5D25E0E4
+P 4200 7550
+F 0 "#PWR0141" H 4200 7300 50  0001 C CNN
+F 1 "GND" H 4205 7377 50  0000 C CNN
+F 2 "" H 4200 7550 50  0001 C CNN
+F 3 "" H 4200 7550 50  0001 C CNN
+	1    4200 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0142
+U 1 1 5D25E65E
+P 3550 7550
+F 0 "#PWR0142" H 3550 7300 50  0001 C CNN
+F 1 "GND" H 3555 7377 50  0000 C CNN
+F 2 "" H 3550 7550 50  0001 C CNN
+F 3 "" H 3550 7550 50  0001 C CNN
+	1    3550 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0143
+U 1 1 5D25EB52
+P 2550 7550
+F 0 "#PWR0143" H 2550 7300 50  0001 C CNN
+F 1 "GND" H 2555 7377 50  0000 C CNN
+F 2 "" H 2550 7550 50  0001 C CNN
+F 3 "" H 2550 7550 50  0001 C CNN
+	1    2550 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0144
+U 1 1 5D25EE72
+P 1950 7550
+F 0 "#PWR0144" H 1950 7300 50  0001 C CNN
+F 1 "GND" H 1955 7377 50  0000 C CNN
+F 2 "" H 1950 7550 50  0001 C CNN
+F 3 "" H 1950 7550 50  0001 C CNN
+	1    1950 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0145
+U 1 1 5D25F051
+P 1300 7550
+F 0 "#PWR0145" H 1300 7300 50  0001 C CNN
+F 1 "GND" H 1305 7377 50  0000 C CNN
+F 2 "" H 1300 7550 50  0001 C CNN
+F 3 "" H 1300 7550 50  0001 C CNN
+	1    1300 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 7200 1300 7550
+Wire Wire Line
+	1950 7200 1950 7550
+Wire Wire Line
+	2550 7300 2550 7550
+Wire Wire Line
+	3550 7200 3550 7550
+Wire Wire Line
+	4200 7200 4200 7550
+$Comp
+L power:GND #PWR0146
+U 1 1 5D29CBD9
+P 950 2950
+F 0 "#PWR0146" H 950 2700 50  0001 C CNN
+F 1 "GND" H 955 2777 50  0000 C CNN
+F 2 "" H 950 2950 50  0001 C CNN
+F 3 "" H 950 2950 50  0001 C CNN
+	1    950  2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0147
+U 1 1 5D29D2E8
+P 1600 4550
+F 0 "#PWR0147" H 1600 4300 50  0001 C CNN
+F 1 "GND" H 1605 4377 50  0000 C CNN
+F 2 "" H 1600 4550 50  0001 C CNN
+F 3 "" H 1600 4550 50  0001 C CNN
+	1    1600 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 4700 2750 4600
+Wire Wire Line
+	1600 4550 1600 4450
+Wire Wire Line
+	950  2950 950  2850
+Text Notes 3050 5050 0    50   ~ 0
+Manufacturer Espressif Systems\nMfr. Part # ESP32-S0WD\nMouser Part # 356-ESP32-S0WD \nPackage # QFN-48
+Text Notes 9500 3100 0    50   ~ 0
+Manufacturer Windond\nMfr. Part # W25Q32JVSSIQ\nMouser Part # 454-W25Q32JVSSIQ\nPackage # SOIC-8
+Text HLabel 6300 6350 2    50   UnSpc ~ 0
+VDD1.8
+Text GLabel 2400 2250 0    50   UnSpc ~ 0
+VDD1.8
+Text GLabel 4950 6600 0    50   UnSpc ~ 0
+VDD1.8
+Text HLabel 6300 6500 2    50   BiDi ~ 0
+GPIO21
+Text HLabel 6300 6650 2    50   BiDi ~ 0
+GPIO22
+Text GLabel 4750 3400 2    50   BiDi ~ 0
+GPIO21
+Text GLabel 10000 4150 2    50   BiDi ~ 0
+GPIO21
+Text GLabel 9750 1500 2    50   UnSpc ~ 0
+VDD1.8
+Text GLabel 10000 4450 2    50   BiDi ~ 0
+GPIO22
+Text GLabel 4750 3500 2    50   BiDi ~ 0
+GPIO22
+Text HLabel 6300 7200 2    50   Input ~ 0
+GPIO0
+Text GLabel 4750 2600 2    50   Input ~ 0
+GPIO0
+Text GLabel 10000 5150 2    50   Input ~ 0
+GPIO0
+Text HLabel 6300 7350 2    50   Input ~ 0
+CHIP_PU
+Text GLabel 8450 5450 0    50   Input ~ 0
+CHIP_PU
+Text GLabel 2750 3150 0    50   Input ~ 0
+CHIP_PU
+Text HLabel 6300 7500 2    50   Input ~ 0
+ESP32_RXD
+Text GLabel 10000 4350 2    50   Input ~ 0
+ESP32_RXD
+Text GLabel 2700 4250 0    50   Input ~ 0
+ESP32_RXD
+Text HLabel 6300 7650 2    50   Output ~ 0
+ESP32_TXD
+Text GLabel 10000 4250 2    50   Output ~ 0
+ESP32_TXD
+Text GLabel 2700 4350 0    50   Output ~ 0
+ESP32_TXD
+Text GLabel 6150 6350 0    50   UnSpc ~ 0
+VDD1.8
+Text GLabel 6150 6650 0    50   BiDi ~ 0
+GPIO22
+Text GLabel 6150 6500 0    50   BiDi ~ 0
+GPIO21
+Text GLabel 6150 7200 0    50   Output ~ 0
+GPIO0
+Text GLabel 6150 7350 0    50   Output ~ 0
+CHIP_PU
+Text GLabel 6150 7500 0    50   Output ~ 0
+ESP32_RXD
+Text GLabel 6150 7650 0    50   Input ~ 0
+ESP32_TXD
+Wire Wire Line
+	6150 6350 6300 6350
+Wire Wire Line
+	6300 6500 6150 6500
+Wire Wire Line
+	6150 6650 6300 6650
+Wire Wire Line
+	6300 7200 6150 7200
+Wire Wire Line
+	6150 7350 6300 7350
+Wire Wire Line
+	6300 7500 6150 7500
+Wire Wire Line
+	6150 7650 6300 7650
+Wire Notes Line
+	5850 5800 5850 4450
+Wire Notes Line
+	500  5800 7000 5800
+Wire Notes Line
+	7000 5800 7000 6550
+Wire Notes Line
+	5500 5800 5500 7800
+Text Notes 5600 6100 0    79   ~ 0
+Conversion etiquetas\nglobal  a local
+Text HLabel 6300 7050 2    50   UnSpc ~ 0
+VUSB_RAW
+Text GLabel 6150 7050 0    50   UnSpc ~ 0
+VUSB_RAW
+Wire Wire Line
+	6150 7050 6300 7050
+Text Notes 6300 6950 0    50   ~ 0
+Power
+Text Notes 6300 6250 0    50   ~ 0
+Accel.
+Wire Notes Line
+	6250 6250 6250 6750
+Wire Notes Line
+	6250 7000 6250 7700
+Text GLabel 8450 5850 0    50   UnSpc ~ 0
+VUSB_RAW
+Text GLabel 10000 5850 2    50   UnSpc ~ 0
+VUSB_RAW
+Wire Wire Line
+	9800 5850 10000 5850
+Wire Wire Line
+	1400 3700 1400 4000
+Wire Wire Line
+	1750 4000 1800 4000
+Connection ~ 1800 4000
+Wire Wire Line
+	1450 4000 1400 4000
+Connection ~ 1400 4000
+Wire Wire Line
+	1400 4000 1400 4100
 $EndSCHEMATC
